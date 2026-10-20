@@ -13,6 +13,8 @@
   },
   "scripts": {
     "quartz": "./quartz/bootstrap-cli.mjs",
+    "sync": "node scripts/sync-collection.mjs",
+    "sync:serve": "node scripts/sync-collection.mjs && npx quartz build --serve",
     "docs": "npx quartz build --serve -d docs",
     "check": "tsc --noEmit && npx prettier . --check",
     "format": "npx prettier . --write",

@@ -1,1 +1,1 @@
-export {}
+export { CarCard } from "./carCard"

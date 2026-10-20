@@ -61,6 +61,8 @@ async function transpileWorkerScript() {
     keepNames: true,
     platform: "node",
     format: "esm",
+    jsx: "automatic",
+    jsxImportSource: "preact",
     packages: "external",
     sourcemap: true,
     sourcesContent: false,

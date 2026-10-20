@@ -1,3 +1,60 @@
 @use "./variables.scss" as *;
 
-// put your custom CSS here!
+// Home page cards
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.home-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.1rem 1.25rem;
+  border: 1px solid var(--lightgray);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--secondary) 6%, transparent);
+  text-decoration: none;
+  transition:
+    transform 0.15s ease,
+    border-color 0.15s ease,
+    background 0.15s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    border-color: var(--secondary);
+    background: color-mix(in srgb, var(--secondary) 12%, transparent);
+  }
+
+  &__icon {
+    font-size: 2rem;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  &__title {
+    font-size: 1.15rem;
+    font-weight: $boldWeight;
+    color: var(--dark);
+  }
+
+  &__desc {
+    font-size: 0.9rem;
+    color: var(--darkgray);
+    line-height: 1.4;
+  }
+
+  &__cta {
+    font-size: 0.85rem;
+    color: var(--secondary);
+    font-weight: $semiBoldWeight;
+  }
+}
