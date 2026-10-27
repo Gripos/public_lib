@@ -12,8 +12,8 @@ bodyStyle: купе
 condition:
   - распак
 status:
-  - заказано
-purchaseDate:
+  - в коллекции
+purchaseDate: 2026-10-09
 price: "1150"
 store: AliExpress
 rating:

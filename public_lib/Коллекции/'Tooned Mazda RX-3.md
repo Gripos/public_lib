@@ -15,7 +15,7 @@ status:
 purchaseDate: 2026-09-28
 price: "250"
 store: Детский мир
-rating: 8
+rating: 7
 tags:
   - JDM
   - Tooned

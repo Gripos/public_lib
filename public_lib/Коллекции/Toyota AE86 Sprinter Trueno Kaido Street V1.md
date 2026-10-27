@@ -13,7 +13,7 @@ condition:
   - распак
 status:
   - заказано
-purchaseDate:
+purchaseDate: 2026-10-15
 price: "2200"
 store: OZON
 rating:
