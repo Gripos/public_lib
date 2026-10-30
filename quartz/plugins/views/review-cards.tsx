@@ -47,16 +47,42 @@ const COLUMN_LABEL_OVERRIDES: Record<string, string> = {
   publisher: "Издательство",
   "note.author": "Автор",
   author: "Автор",
-  "note.artist": "Исполнитель",
-  artist: "Исполнитель",
+  "note.artist": "Художник",
+  artist: "Художник",
   "note.date": "Дата",
   date: "Дата",
+  "note.purchaseDate": "Дата покупки",
+  purchaseDate: "Дата покупки",
   "note.status": "Статус",
   status: "Статус",
   "note.tags": "Теги",
   tags: "Теги",
   "note.type": "Тип",
   type: "Тип",
+  "note.model_brand": "Бренд модели",
+  model_brand: "Бренд модели",
+  "note.car_brand": "Марка",
+  car_brand: "Марка",
+  "note.model": "Модель",
+  model: "Модель",
+  "note.scale": "Масштаб",
+  scale: "Масштаб",
+  "note.series": "Серия",
+  series: "Серия",
+  "note.sku": "Артикул",
+  sku: "Артикул",
+  "note.color": "Цвет",
+  color: "Цвет",
+  "note.bodyStyle": "Кузов",
+  bodyStyle: "Кузов",
+  "note.condition": "Состояние",
+  condition: "Состояние",
+  "note.price": "Цена",
+  price: "Цена",
+  "note.store": "Магазин",
+  store: "Магазин",
+  "note.country": "Страна",
+  country: "Страна",
 }
 
 function getNestedValue(value: unknown, path: string[]): unknown {
@@ -242,6 +268,12 @@ function renderMetaValue(column: string, value: unknown, ctx: LinkCtx): JSX.Elem
   }
   if (key === "tags") {
     return <TagLinks value={value} ctx={ctx} />
+  }
+  if (key === "condition") {
+    const conditions = asArray(value)
+    if (conditions.length > 0) {
+      return <span>{conditions.join(", ")}</span>
+    }
   }
   if (value instanceof Date) {
     return <span>{formatDate(value)}</span>
